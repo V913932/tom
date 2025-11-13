@@ -1,7 +1,7 @@
 # Tom
 
 Hello! I'm **Tom**, a tiny build system for Java projects.  
-Tom can build `.jar` and **fatjar** files using a simple `build.toml` configuration.
+Tom can build `.jar` and **fatjar** files using a simple `build.toml` configuration. and the build system deps:tomlc99 and libcurl,libcurl maded by curl project,tomlc99 maded by cktan
 
 ---
 
@@ -23,3 +23,4 @@ dependencies = [
   { key = "commons", gav = "org.apache.commons:commons-lang3:3.12.0" },
   { key = "junit", gav = "junit:junit:4.13.2" }
 ]
+```
