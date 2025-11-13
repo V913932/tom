@@ -23,4 +23,15 @@ dependencies = [
   { key = "commons", gav = "org.apache.commons:commons-lang3:3.12.0" },
   { key = "junit", gav = "junit:junit:4.13.2" }
 ]
+# for kotlin(only in v2)
+name = "MyKotlinProject"
+version = "1.0"
+language = "kotlin" # فیلد جدید
+output_type = "fatjar"
+main_class = "MainKt" # توجه: نام کلاس اصلی Kotlin معمولاً با Kt پایان می‌یابد
+output_path = "dist/myapp.jar"
+
+dependencies = [
+  { key = "kotlin-stdlib", gav = "org.jetbrains.kotlin:kotlin-stdlib:1.9.10" }
+]
 ```
