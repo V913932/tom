@@ -12,16 +12,14 @@ Tom can build `.jar` and **fatjar** files using a simple `build.toml` configurat
 # This is not the Tom I submitted feedback about to Google.
 # This project is independent, ceremonial, and built from scratch by Samghaderi248@gmail.com.
 
-name = "MyApp"
-version = "1.0.0"
-output_type = "fatjar"  # or "jar"
+name = "MyProject"
+version = "1.0"
+output_type = "fatjar" # or jar
 main_class = "ping.Main"
-output_path = "app.jar"
+output_path = "dist/myapp.jar"
 
-[[dependencies]]
-key = "okhttp"
-gav = "com.squareup.okhttp3:okhttp:4.9.3"
-
-[[dependencies]]
-key = "gson"
-gav = "com.google.code.gson:gson:2.8.9"
+dependencies = [
+  { key = "gson", gav = "com.google.code.gson:gson:2.8.9" },
+  { key = "commons", gav = "org.apache.commons:commons-lang3:3.12.0" },
+  { key = "junit", gav = "junit:junit:4.13.2" }
+]
