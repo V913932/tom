@@ -239,7 +239,7 @@ void cmd_make(BuildConf* conf) {
     }
 }
 
-// تابع اصلی ساخت (دانلود + ساخت)
+// ساخت اصلی (دانلود + ساخت)
 void cmdbuild(BuildConf* conf) {
     cmddownload(conf);
     cmd_make(conf);
@@ -279,6 +279,7 @@ BuildConf* load_config(const char* path) {
     toml_datum_t output_path_datum = toml_string_in(conf_table, "output_path");
     build_conf->output_path = output_path_datum.ok ? output_path_datum.u.s : strdup("output.jar");
 
+    // تغییر اینجا: خواندن آرایه وابستگی‌ها
     toml_array_t* deps_arr = toml_array_in(conf_table, "dependencies");
     int n = deps_arr ? toml_array_nelem(deps_arr) : 0;
     build_conf->dep_count = n;
